@@ -1,0 +1,17 @@
+//
+//  AppleHotNews-Prefix.pch
+//  AppleHotNews
+//
+//  Created by oleksandr on 15.10.14.
+//  Copyright (c) 2014 Access Softek. All rights reserved.
+//
+
+#ifndef AppleHotNews_AppleHotNews_Prefix_pch
+#define AppleHotNews_AppleHotNews_Prefix_pch
+
+#import "MBProgressHUD.h"
+
+#define show_hud(addedToView) [[MBProgressHUD showHUDAddedTo:addedToView animated:YES] setDimBackground:YES]
+#define hide_hud(forView) [MBProgressHUD hideHUDForView:forView animated:YES]
+#define isIPAD ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#endif
