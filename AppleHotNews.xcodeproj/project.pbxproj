@@ -7,176 +7,315 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11C1F25719EE56C800B88313 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F25619EE56C800B88313 /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11C1F25A19EE56C800B88313 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F25919EE56C800B88313 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11C1F26219EE56C800B88313 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C1F26119EE56C800B88313 /* Images.xcassets */; };
-		11C1F27119EE56C800B88313 /* AppleHotNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F27019EE56C800B88313 /* AppleHotNewsTests.m */; };
-		11C1F28819EE570F00B88313 /* RSSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F27D19EE570F00B88313 /* RSSChannel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11C1F28919EE570F00B88313 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F27F19EE570F00B88313 /* RSSItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11C1F28A19EE570F00B88313 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F28219EE570F00B88313 /* MBProgressHUD.m */; };
-		11C1F28B19EE570F00B88313 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F28519EE570F00B88313 /* ListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11C1F28C19EE570F00B88313 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C1F28719EE570F00B88313 /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DA253E41EE91B5200EC6F5F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA253E31EE91B5200EC6F5F /* Helpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DA253E71EE9233C00EC6F5F /* NewsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA253E61EE9233C00EC6F5F /* NewsListViewModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DA253EA1EE9235F00EC6F5F /* NewsListConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA253E91EE9235F00EC6F5F /* NewsListConfigurator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DA253ED1EE924C500EC6F5F /* NetworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA253EC1EE924C500EC6F5F /* NetworkLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2511EE83D69004E12FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2411EE83D69004E12FB /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2521EE83D69004E12FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2471EE83D69004E12FB /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2531EE83D69004E12FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5A2491EE83D69004E12FB /* Assets.xcassets */; };
+		1DC5A25A1EE83DD9004E12FB /* AppConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2591EE83DD9004E12FB /* AppConfigurator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2681EE85606004E12FB /* RSSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2651EE85606004E12FB /* RSSChannel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2691EE85606004E12FB /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2671EE85606004E12FB /* RSSItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2701EE85691004E12FB /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A26C1EE85691004E12FB /* NewsDetailsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2711EE85691004E12FB /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A26F1EE85691004E12FB /* NewsListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DC5A2741EE8579B004E12FB /* ActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A2731EE8579B004E12FB /* ActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DCD27A41EE9A05B00FA5A4A /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD27A31EE9A05B00FA5A4A /* UIViewController+Alert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DCD27A71EE9A0C100FA5A4A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD27A61EE9A0C100FA5A4A /* Constants.m */; };
+		1DE856F91EE95C8000C873BF /* AppleHotNewsChanelXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE856F81EE95C8000C873BF /* AppleHotNewsChanelXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DE856FC1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE856FB1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1DE856FF1EE9631700C873BF /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE856FE1EE9631700C873BF /* XMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		285F7A828E620615CA53CEF6 /* libPods-AppleHotNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C05B2BFE49DCBB98927B41F /* libPods-AppleHotNews.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		11C1F26B19EE56C800B88313 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 11C1F24919EE56C800B88313 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 11C1F25019EE56C800B88313;
-			remoteInfo = AppleHotNews;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		11C1F25119EE56C800B88313 /* AppleHotNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleHotNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11C1F25519EE56C800B88313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11C1F25619EE56C800B88313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		11C1F25819EE56C800B88313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		11C1F25919EE56C800B88313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		11C1F26119EE56C800B88313 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		11C1F26A19EE56C800B88313 /* AppleHotNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleHotNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		11C1F26F19EE56C800B88313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11C1F27019EE56C800B88313 /* AppleHotNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleHotNewsTests.m; sourceTree = "<group>"; };
-		11C1F27C19EE570F00B88313 /* RSSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSChannel.h; sourceTree = "<group>"; };
-		11C1F27D19EE570F00B88313 /* RSSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSChannel.m; sourceTree = "<group>"; };
-		11C1F27E19EE570F00B88313 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
-		11C1F27F19EE570F00B88313 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
-		11C1F28119EE570F00B88313 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		11C1F28219EE570F00B88313 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		11C1F28419EE570F00B88313 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		11C1F28519EE570F00B88313 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		11C1F28619EE570F00B88313 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		11C1F28719EE570F00B88313 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		11C1F28D19EE5A4B00B88313 /* AppleHotNews-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppleHotNews-Prefix.pch"; sourceTree = "<group>"; };
+		1DA253E21EE91B5200EC6F5F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		1DA253E31EE91B5200EC6F5F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		1DA253E51EE9233C00EC6F5F /* NewsListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewModel.h; sourceTree = "<group>"; };
+		1DA253E61EE9233C00EC6F5F /* NewsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewModel.m; sourceTree = "<group>"; };
+		1DA253E81EE9235F00EC6F5F /* NewsListConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListConfigurator.h; sourceTree = "<group>"; };
+		1DA253E91EE9235F00EC6F5F /* NewsListConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListConfigurator.m; sourceTree = "<group>"; };
+		1DA253EB1EE924C500EC6F5F /* NetworkLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
+		1DA253EC1EE924C500EC6F5F /* NetworkLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkLayer.m; sourceTree = "<group>"; };
+		1DC5A2241EE83D1A004E12FB /* AppleHotNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleHotNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC5A2401EE83D69004E12FB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1DC5A2411EE83D69004E12FB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1DC5A2471EE83D69004E12FB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DC5A2491EE83D69004E12FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC5A2501EE83D69004E12FB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC5A2581EE83DD9004E12FB /* AppConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigurator.h; sourceTree = "<group>"; };
+		1DC5A2591EE83DD9004E12FB /* AppConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigurator.m; sourceTree = "<group>"; };
+		1DC5A2641EE85606004E12FB /* RSSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSChannel.h; sourceTree = "<group>"; };
+		1DC5A2651EE85606004E12FB /* RSSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSChannel.m; sourceTree = "<group>"; };
+		1DC5A2661EE85606004E12FB /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
+		1DC5A2671EE85606004E12FB /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
+		1DC5A26B1EE85691004E12FB /* NewsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailsViewController.h; sourceTree = "<group>"; };
+		1DC5A26C1EE85691004E12FB /* NewsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsViewController.m; sourceTree = "<group>"; };
+		1DC5A26E1EE85691004E12FB /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		1DC5A26F1EE85691004E12FB /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		1DC5A2721EE8579B004E12FB /* ActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorManager.h; sourceTree = "<group>"; };
+		1DC5A2731EE8579B004E12FB /* ActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorManager.m; sourceTree = "<group>"; };
+		1DCD27A21EE9A05B00FA5A4A /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		1DCD27A31EE9A05B00FA5A4A /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		1DCD27A51EE9A0C100FA5A4A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1DCD27A61EE9A0C100FA5A4A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		1DE856F71EE95C8000C873BF /* AppleHotNewsChanelXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleHotNewsChanelXMLParser.h; sourceTree = "<group>"; };
+		1DE856F81EE95C8000C873BF /* AppleHotNewsChanelXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleHotNewsChanelXMLParser.m; sourceTree = "<group>"; };
+		1DE856FA1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleHotNewsItemXMLParser.h; sourceTree = "<group>"; };
+		1DE856FB1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleHotNewsItemXMLParser.m; sourceTree = "<group>"; };
+		1DE856FD1EE9631700C873BF /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		1DE856FE1EE9631700C873BF /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		4C05B2BFE49DCBB98927B41F /* libPods-AppleHotNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppleHotNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A2F804CB010394B602C590 /* Pods-AppleHotNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleHotNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleHotNews/Pods-AppleHotNews.debug.xcconfig"; sourceTree = "<group>"; };
+		D48127E521BDAEC6555AEFA9 /* Pods-AppleHotNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleHotNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleHotNews/Pods-AppleHotNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		11C1F24E19EE56C800B88313 /* Frameworks */ = {
+		1DC5A2211EE83D1A004E12FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11C1F26719EE56C800B88313 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				285F7A828E620615CA53CEF6 /* libPods-AppleHotNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11C1F24819EE56C800B88313 = {
+		152D821AF912D1148DFE3F68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F25319EE56C800B88313 /* AppleHotNews */,
-				11C1F26D19EE56C800B88313 /* AppleHotNewsTests */,
-				11C1F25219EE56C800B88313 /* Products */,
+				4C05B2BFE49DCBB98927B41F /* libPods-AppleHotNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DC5A21B1EE83D1A004E12FB = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2261EE83D1A004E12FB /* AppleHotNews */,
+				1DC5A2251EE83D1A004E12FB /* Products */,
+				8AC7736539B61DB07EECEF71 /* Pods */,
+				152D821AF912D1148DFE3F68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		11C1F25219EE56C800B88313 /* Products */ = {
+		1DC5A2251EE83D1A004E12FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F25119EE56C800B88313 /* AppleHotNews.app */,
-				11C1F26A19EE56C800B88313 /* AppleHotNewsTests.xctest */,
+				1DC5A2241EE83D1A004E12FB /* AppleHotNews.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11C1F25319EE56C800B88313 /* AppleHotNews */ = {
+		1DC5A2261EE83D1A004E12FB /* AppleHotNews */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F27A19EE570F00B88313 /* Classes */,
-				11C1F25819EE56C800B88313 /* AppDelegate.h */,
-				11C1F25919EE56C800B88313 /* AppDelegate.m */,
-				11C1F26119EE56C800B88313 /* Images.xcassets */,
-				11C1F25419EE56C800B88313 /* Supporting Files */,
+				1DC5A23E1EE83D69004E12FB /* Classes */,
+				1DC5A2481EE83D69004E12FB /* Resources */,
 			);
 			path = AppleHotNews;
 			sourceTree = "<group>";
 		};
-		11C1F25419EE56C800B88313 /* Supporting Files */ = {
+		1DC5A23E1EE83D69004E12FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F25519EE56C800B88313 /* Info.plist */,
-				11C1F28D19EE5A4B00B88313 /* AppleHotNews-Prefix.pch */,
-				11C1F25619EE56C800B88313 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		11C1F26D19EE56C800B88313 /* AppleHotNewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				11C1F27019EE56C800B88313 /* AppleHotNewsTests.m */,
-				11C1F26E19EE56C800B88313 /* Supporting Files */,
-			);
-			path = AppleHotNewsTests;
-			sourceTree = "<group>";
-		};
-		11C1F26E19EE56C800B88313 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				11C1F26F19EE56C800B88313 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		11C1F27A19EE570F00B88313 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				11C1F27B19EE570F00B88313 /* DataModels */,
-				11C1F28019EE570F00B88313 /* External */,
-				11C1F28319EE570F00B88313 /* ViewControllers */,
+				1DC5A23F1EE83D69004E12FB /* Common */,
+				1DC5A2451EE83D69004E12FB /* Scenes */,
+				1DC5A2461EE83D69004E12FB /* SupportingFiles */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		11C1F27B19EE570F00B88313 /* DataModels */ = {
+		1DC5A23F1EE83D69004E12FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F27C19EE570F00B88313 /* RSSChannel.h */,
-				11C1F27D19EE570F00B88313 /* RSSChannel.m */,
-				11C1F27E19EE570F00B88313 /* RSSItem.h */,
-				11C1F27F19EE570F00B88313 /* RSSItem.m */,
+				1DC5A2401EE83D69004E12FB /* AppDelegate.h */,
+				1DC5A2411EE83D69004E12FB /* AppDelegate.m */,
+				1DC5A2631EE85606004E12FB /* DataModels */,
+				1DC5A2571EE83DB7004E12FB /* Configurators */,
+				1DC5A2421EE83D69004E12FB /* Extensions */,
+				1DC5A2431EE83D69004E12FB /* Externals */,
+				1DC5A2441EE83D69004E12FB /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1DC5A2421EE83D69004E12FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DCD27A21EE9A05B00FA5A4A /* UIViewController+Alert.h */,
+				1DCD27A31EE9A05B00FA5A4A /* UIViewController+Alert.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1DC5A2431EE83D69004E12FB /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		1DC5A2441EE83D69004E12FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1DE856F51EE95C8000C873BF /* XMLParsers */,
+				1DC5A2721EE8579B004E12FB /* ActivityIndicatorManager.h */,
+				1DC5A2731EE8579B004E12FB /* ActivityIndicatorManager.m */,
+				1DA253E21EE91B5200EC6F5F /* Helpers.h */,
+				1DA253E31EE91B5200EC6F5F /* Helpers.m */,
+				1DA253EB1EE924C500EC6F5F /* NetworkLayer.h */,
+				1DA253EC1EE924C500EC6F5F /* NetworkLayer.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1DC5A2451EE83D69004E12FB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A26D1EE85691004E12FB /* NewsList */,
+				1DC5A26A1EE85691004E12FB /* NewsDetails */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1DC5A2461EE83D69004E12FB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2471EE83D69004E12FB /* main.m */,
+				1DCD27A51EE9A0C100FA5A4A /* Constants.h */,
+				1DCD27A61EE9A0C100FA5A4A /* Constants.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1DC5A2481EE83D69004E12FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2491EE83D69004E12FB /* Assets.xcassets */,
+				1DC5A24F1EE83D69004E12FB /* Plists */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1DC5A24F1EE83D69004E12FB /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2501EE83D69004E12FB /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		1DC5A2571EE83DB7004E12FB /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2581EE83DD9004E12FB /* AppConfigurator.h */,
+				1DC5A2591EE83DD9004E12FB /* AppConfigurator.m */,
+			);
+			path = Configurators;
+			sourceTree = "<group>";
+		};
+		1DC5A2631EE85606004E12FB /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A2641EE85606004E12FB /* RSSChannel.h */,
+				1DC5A2651EE85606004E12FB /* RSSChannel.m */,
+				1DC5A2661EE85606004E12FB /* RSSItem.h */,
+				1DC5A2671EE85606004E12FB /* RSSItem.m */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		11C1F28019EE570F00B88313 /* External */ = {
+		1DC5A26A1EE85691004E12FB /* NewsDetails */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F28119EE570F00B88313 /* MBProgressHUD.h */,
-				11C1F28219EE570F00B88313 /* MBProgressHUD.m */,
+				1DC5A26B1EE85691004E12FB /* NewsDetailsViewController.h */,
+				1DC5A26C1EE85691004E12FB /* NewsDetailsViewController.m */,
 			);
-			path = External;
+			path = NewsDetails;
 			sourceTree = "<group>";
 		};
-		11C1F28319EE570F00B88313 /* ViewControllers */ = {
+		1DC5A26D1EE85691004E12FB /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
-				11C1F28419EE570F00B88313 /* ListViewController.h */,
-				11C1F28519EE570F00B88313 /* ListViewController.m */,
-				11C1F28619EE570F00B88313 /* WebViewController.h */,
-				11C1F28719EE570F00B88313 /* WebViewController.m */,
+				1DCD27A81EE9A42000FA5A4A /* View */,
+				1DCD27A91EE9A42800FA5A4A /* ViewModel */,
+				1DCD27AA1EE9A43600FA5A4A /* Configurators */,
 			);
-			path = ViewControllers;
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		1DCD27A81EE9A42000FA5A4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5A26E1EE85691004E12FB /* NewsListViewController.h */,
+				1DC5A26F1EE85691004E12FB /* NewsListViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1DCD27A91EE9A42800FA5A4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DA253E51EE9233C00EC6F5F /* NewsListViewModel.h */,
+				1DA253E61EE9233C00EC6F5F /* NewsListViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DCD27AA1EE9A43600FA5A4A /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				1DA253E81EE9235F00EC6F5F /* NewsListConfigurator.h */,
+				1DA253E91EE9235F00EC6F5F /* NewsListConfigurator.m */,
+			);
+			name = Configurators;
+			sourceTree = "<group>";
+		};
+		1DE856F51EE95C8000C873BF /* XMLParsers */ = {
+			isa = PBXGroup;
+			children = (
+				1DE856F61EE95C8000C873BF /* AppleHotNews */,
+				1DE856FD1EE9631700C873BF /* XMLParser.h */,
+				1DE856FE1EE9631700C873BF /* XMLParser.m */,
+			);
+			path = XMLParsers;
+			sourceTree = "<group>";
+		};
+		1DE856F61EE95C8000C873BF /* AppleHotNews */ = {
+			isa = PBXGroup;
+			children = (
+				1DE856F71EE95C8000C873BF /* AppleHotNewsChanelXMLParser.h */,
+				1DE856F81EE95C8000C873BF /* AppleHotNewsChanelXMLParser.m */,
+				1DE856FA1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.h */,
+				1DE856FB1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.m */,
+			);
+			path = AppleHotNews;
+			sourceTree = "<group>";
+		};
+		8AC7736539B61DB07EECEF71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51A2F804CB010394B602C590 /* Pods-AppleHotNews.debug.xcconfig */,
+				D48127E521BDAEC6555AEFA9 /* Pods-AppleHotNews.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11C1F25019EE56C800B88313 /* AppleHotNews */ = {
+		1DC5A2231EE83D1A004E12FB /* AppleHotNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11C1F27419EE56C800B88313 /* Build configuration list for PBXNativeTarget "AppleHotNews" */;
+			buildConfigurationList = 1DC5A23B1EE83D1A004E12FB /* Build configuration list for PBXNativeTarget "AppleHotNews" */;
 			buildPhases = (
-				11C1F24D19EE56C800B88313 /* Sources */,
-				11C1F24E19EE56C800B88313 /* Frameworks */,
-				11C1F24F19EE56C800B88313 /* Resources */,
+				E9F3ED60F6EBC8F0C0618F11 /* [CP] Check Pods Manifest.lock */,
+				1DC5A2201EE83D1A004E12FB /* Sources */,
+				1DC5A2211EE83D1A004E12FB /* Frameworks */,
+				1DC5A2221EE83D1A004E12FB /* Resources */,
+				453A7EC0E42452E3D909DA84 /* [CP] Embed Pods Frameworks */,
+				4EBB15850B64279FBC8AA4CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,46 +323,25 @@
 			);
 			name = AppleHotNews;
 			productName = AppleHotNews;
-			productReference = 11C1F25119EE56C800B88313 /* AppleHotNews.app */;
+			productReference = 1DC5A2241EE83D1A004E12FB /* AppleHotNews.app */;
 			productType = "com.apple.product-type.application";
-		};
-		11C1F26919EE56C800B88313 /* AppleHotNewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11C1F27719EE56C800B88313 /* Build configuration list for PBXNativeTarget "AppleHotNewsTests" */;
-			buildPhases = (
-				11C1F26619EE56C800B88313 /* Sources */,
-				11C1F26719EE56C800B88313 /* Frameworks */,
-				11C1F26819EE56C800B88313 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11C1F26C19EE56C800B88313 /* PBXTargetDependency */,
-			);
-			name = AppleHotNewsTests;
-			productName = AppleHotNewsTests;
-			productReference = 11C1F26A19EE56C800B88313 /* AppleHotNewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		11C1F24919EE56C800B88313 /* Project object */ = {
+		1DC5A21C1EE83D1A004E12FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Access Softek";
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Oleksandr Nechet";
 				TargetAttributes = {
-					11C1F25019EE56C800B88313 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
-					11C1F26919EE56C800B88313 = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 11C1F25019EE56C800B88313;
+					1DC5A2231EE83D1A004E12FB = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 11C1F24C19EE56C800B88313 /* Build configuration list for PBXProject "AppleHotNews" */;
+			buildConfigurationList = 1DC5A21F1EE83D1A004E12FB /* Build configuration list for PBXProject "AppleHotNews" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,73 +349,109 @@
 				en,
 				Base,
 			);
-			mainGroup = 11C1F24819EE56C800B88313;
-			productRefGroup = 11C1F25219EE56C800B88313 /* Products */;
+			mainGroup = 1DC5A21B1EE83D1A004E12FB;
+			productRefGroup = 1DC5A2251EE83D1A004E12FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11C1F25019EE56C800B88313 /* AppleHotNews */,
-				11C1F26919EE56C800B88313 /* AppleHotNewsTests */,
+				1DC5A2231EE83D1A004E12FB /* AppleHotNews */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11C1F24F19EE56C800B88313 /* Resources */ = {
+		1DC5A2221EE83D1A004E12FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C1F26219EE56C800B88313 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11C1F26819EE56C800B88313 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1DC5A2531EE83D69004E12FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		11C1F24D19EE56C800B88313 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		453A7EC0E42452E3D909DA84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C1F28819EE570F00B88313 /* RSSChannel.m in Sources */,
-				11C1F28C19EE570F00B88313 /* WebViewController.m in Sources */,
-				11C1F25A19EE56C800B88313 /* AppDelegate.m in Sources */,
-				11C1F28B19EE570F00B88313 /* ListViewController.m in Sources */,
-				11C1F28A19EE570F00B88313 /* MBProgressHUD.m in Sources */,
-				11C1F25719EE56C800B88313 /* main.m in Sources */,
-				11C1F28919EE570F00B88313 /* RSSItem.m in Sources */,
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleHotNews/Pods-AppleHotNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		11C1F26619EE56C800B88313 /* Sources */ = {
+		4EBB15850B64279FBC8AA4CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleHotNews/Pods-AppleHotNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9F3ED60F6EBC8F0C0618F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DC5A2201EE83D1A004E12FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C1F27119EE56C800B88313 /* AppleHotNewsTests.m in Sources */,
+				1DA253ED1EE924C500EC6F5F /* NetworkLayer.m in Sources */,
+				1DC5A2681EE85606004E12FB /* RSSChannel.m in Sources */,
+				1DCD27A41EE9A05B00FA5A4A /* UIViewController+Alert.m in Sources */,
+				1DC5A2521EE83D69004E12FB /* main.m in Sources */,
+				1DC5A2741EE8579B004E12FB /* ActivityIndicatorManager.m in Sources */,
+				1DE856FF1EE9631700C873BF /* XMLParser.m in Sources */,
+				1DC5A2691EE85606004E12FB /* RSSItem.m in Sources */,
+				1DC5A25A1EE83DD9004E12FB /* AppConfigurator.m in Sources */,
+				1DC5A2701EE85691004E12FB /* NewsDetailsViewController.m in Sources */,
+				1DE856FC1EE95C9C00C873BF /* AppleHotNewsItemXMLParser.m in Sources */,
+				1DA253E41EE91B5200EC6F5F /* Helpers.m in Sources */,
+				1DA253E71EE9233C00EC6F5F /* NewsListViewModel.m in Sources */,
+				1DE856F91EE95C8000C873BF /* AppleHotNewsChanelXMLParser.m in Sources */,
+				1DA253EA1EE9235F00EC6F5F /* NewsListConfigurator.m in Sources */,
+				1DC5A2711EE85691004E12FB /* NewsListViewController.m in Sources */,
+				1DC5A2511EE83D69004E12FB /* AppDelegate.m in Sources */,
+				1DCD27A71EE9A0C100FA5A4A /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		11C1F26C19EE56C800B88313 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 11C1F25019EE56C800B88313 /* AppleHotNews */;
-			targetProxy = 11C1F26B19EE56C800B88313 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		11C1F27219EE56C800B88313 /* Debug */ = {
+		1DC5A2391EE83D1A004E12FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -305,30 +459,35 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,10 +495,12 @@
 			};
 			name = Debug;
 		};
-		11C1F27319EE56C800B88313 /* Release */ = {
+		1DC5A23A1EE83D1A004E12FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -347,24 +508,29 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,91 +538,58 @@
 			};
 			name = Release;
 		};
-		11C1F27519EE56C800B88313 /* Debug */ = {
+		1DC5A23C1EE83D1A004E12FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A2F804CB010394B602C590 /* Pods-AppleHotNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "AppleHotNews/AppleHotNews-Prefix.pch";
-				INFOPLIST_FILE = AppleHotNews/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AppleHotNews/Resources/Plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OLN.AppleHotNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
-		11C1F27619EE56C800B88313 /* Release */ = {
+		1DC5A23D1EE83D1A004E12FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D48127E521BDAEC6555AEFA9 /* Pods-AppleHotNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "AppleHotNews/AppleHotNews-Prefix.pch";
-				INFOPLIST_FILE = AppleHotNews/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AppleHotNews/Resources/Plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OLN.AppleHotNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		11C1F27819EE56C800B88313 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AppleHotNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleHotNews.app/AppleHotNews";
-			};
-			name = Debug;
-		};
-		11C1F27919EE56C800B88313 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AppleHotNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleHotNews.app/AppleHotNews";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11C1F24C19EE56C800B88313 /* Build configuration list for PBXProject "AppleHotNews" */ = {
+		1DC5A21F1EE83D1A004E12FB /* Build configuration list for PBXProject "AppleHotNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11C1F27219EE56C800B88313 /* Debug */,
-				11C1F27319EE56C800B88313 /* Release */,
+				1DC5A2391EE83D1A004E12FB /* Debug */,
+				1DC5A23A1EE83D1A004E12FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11C1F27419EE56C800B88313 /* Build configuration list for PBXNativeTarget "AppleHotNews" */ = {
+		1DC5A23B1EE83D1A004E12FB /* Build configuration list for PBXNativeTarget "AppleHotNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11C1F27519EE56C800B88313 /* Debug */,
-				11C1F27619EE56C800B88313 /* Release */,
+				1DC5A23C1EE83D1A004E12FB /* Debug */,
+				1DC5A23D1EE83D1A004E12FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		11C1F27719EE56C800B88313 /* Build configuration list for PBXNativeTarget "AppleHotNewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11C1F27819EE56C800B88313 /* Debug */,
-				11C1F27919EE56C800B88313 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 11C1F24919EE56C800B88313 /* Project object */;
+	rootObject = 1DC5A21C1EE83D1A004E12FB /* Project object */;
 }
