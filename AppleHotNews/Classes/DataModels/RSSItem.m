@@ -56,6 +56,7 @@ foundCharacters:(NSString *)str
 {
     if ([elementName isEqualToString:@"pubDate"])
         [parser setDelegate:_parentParserDelegate];
+    [currentString release];
     currentString = nil;
 }
 

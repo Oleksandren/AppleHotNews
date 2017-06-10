@@ -65,11 +65,14 @@
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     hide_hud(self.webView);
-    [[[UIAlertView alloc] initWithTitle:@"Could not load page"
-                                message:[error localizedDescription]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil, nil] show];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Could not load page"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+    
+    [alertView show];
+    [alertView release];
 }
 
 #pragma mark - UISplitViewController Delegate

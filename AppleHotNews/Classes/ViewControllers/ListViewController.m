@@ -22,9 +22,14 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
     self = [super initWithStyle:style];
     if (self) {
         [self fetchEntries];
-        self.tableView.separatorStyle =UITableViewCellSeparatorStyleNone;
     }
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tableView.separatorStyle =UITableViewCellSeparatorStyleNone;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -88,10 +93,8 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RSSItem *currentItem = [channel itemsStore][indexPath.row];
-    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 40, MAXFLOAT);
-    CGSize titleSize = [currentItem.title sizeWithFont:[self titleFont] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-    CGSize detailSize = [currentItem.detail sizeWithFont:[self detailFont] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-    return titleSize.height + detailSize.height + 20;
+    
+    return [self heightForItem:currentItem];
 }
 
 #pragma mark - Privat Getters
@@ -118,7 +121,10 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:xmlData];
     [parser setDelegate:self];
     [parser parse];
+    [parser release];
     
+    [xmlData release];
+    [connection release];
     xmlData = nil;
     connection = nil;
     hide_hud(self.view);
@@ -135,6 +141,8 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
 }
 
 - (void)connection:(NSURLConnection *)conn didFailWithError:(NSError *)error {
+    [xmlData release];
+    [connection release];
     connection = nil;
     xmlData = nil;
     hide_hud(self.view);
@@ -172,6 +180,21 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
     connection = [[NSURLConnection alloc] initWithRequest:req
                                                  delegate:self
                                          startImmediately:YES];
+}
+
+- (CGFloat)heightForItem:(RSSItem *)item
+{
+    CGSize constraintSize = CGSizeMake(self.view.frame.size.width - 40, 0);
+    
+    CGRect titleRect = [item.title boundingRectWithSize:constraintSize
+                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                             attributes:@{NSFontAttributeName:[self titleFont]}
+                                                context:nil];
+    CGRect detailRect = [item.detail boundingRectWithSize:constraintSize
+                                                  options:NSStringDrawingUsesLineFragmentOrigin
+                                               attributes:@{NSFontAttributeName:[self detailFont]}
+                                                  context:nil];
+    return titleRect.size.height + detailRect.size.height + 20;
 }
 
 @end
