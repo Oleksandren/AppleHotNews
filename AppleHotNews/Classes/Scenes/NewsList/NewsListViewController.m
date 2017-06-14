@@ -16,9 +16,7 @@
 #import "NewsListConfigurator.h"
 
 @interface NewsListViewController ()
-{
-    RSSChannel *_channel;
-}
+@property(nonatomic, strong) RSSChannel *channel;
 @end
 
 @implementation NewsListViewController
@@ -44,9 +42,13 @@
 
 -(void)dealloc
 {
-    [super dealloc];
+    [_channel release];
+    [_newsDetailsViewController release];
+    [_viewModel release];
     _channel = nil;
     _newsDetailsViewController = nil;
+    _viewModel = nil;
+    [super dealloc];
 }
 
 #pragma mark - UITableView Delegate
@@ -59,10 +61,11 @@
     {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_newsDetailsViewController];
         NSArray *vcs = [NSArray arrayWithObjects:[self navigationController], nav, nil];
+        [nav release];
         [[self splitViewController] setViewControllers:vcs];
         [[self splitViewController] setDelegate:_newsDetailsViewController];
     }
-    [_newsDetailsViewController setItem:[_channel itemsStore][indexPath.row]];
+    [_newsDetailsViewController setItem:[self.channel itemsStore][indexPath.row]];
 }
 
 #pragma mark - UITableView Data Source
@@ -80,7 +83,7 @@
         [cell.detailTextLabel setNumberOfLines:0];
         [cell.detailTextLabel setFont:[self detailFont]];
     }
-    RSSItem *item = [_channel itemsStore][indexPath.row];
+    RSSItem *item = [self.channel itemsStore][indexPath.row];
     cell.textLabel.text = item.title;
     cell.detailTextLabel.text = item.detail;
     return cell;
@@ -88,12 +91,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[_channel itemsStore] count];
+    NSUInteger c = [[self.channel itemsStore] count];
+    return c;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RSSItem *item = [_channel itemsStore][indexPath.row];
+    RSSItem *item = [self.channel itemsStore][indexPath.row];
     
     return [self heightForItem:item];
 }
@@ -121,7 +125,7 @@
 {
     _viewModel.didUpdatedChanelInfo = ^(RSSChannel * _Nonnull chanel) {
         [ActivityIndicatorManager hideHUD];
-        _channel = chanel;
+        self.channel = chanel;
         [self.tableView reloadData];
     };
 }

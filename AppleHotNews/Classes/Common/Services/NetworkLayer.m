@@ -65,8 +65,11 @@ static NetworkLayer *shared = nil;
 
 - (void)dealloc
 {
-    [super dealloc];
+    [_completionHandler release];
     [connection release];
+    _completionHandler = nil;
+    connection = nil;
+    [super dealloc];
 }
 
 #pragma mark: - NetworkLayerProtocol
@@ -80,8 +83,6 @@ static NetworkLayer *shared = nil;
     connection = [[NSURLConnection alloc] initWithRequest:request
                                                  delegate:self
                                          startImmediately:YES];
-    [url release];
-    [request release];
 }
 
 #pragma mark - NSURLConnection Delegate

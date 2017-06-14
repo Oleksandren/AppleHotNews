@@ -25,9 +25,11 @@
 
 -(void)dealloc
 {
-    [super dealloc];
+    [_title release];
+    [_itemsStore release];
     _title = nil;
     _itemsStore = nil;
+    [super dealloc];
 }
 
 #pragma mark - Setters

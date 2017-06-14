@@ -32,6 +32,12 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_channel release];
+    [super dealloc];
+}
+
 #pragma mark - NSXMLParser Delegate
 
 - (void)parser:(NSXMLParser *)parser

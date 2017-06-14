@@ -29,6 +29,12 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_item release];
+    [super dealloc];
+}
+
 
 #pragma mark - NSXMLParser Delegate
 

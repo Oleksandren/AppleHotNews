@@ -29,9 +29,15 @@
         [svc setViewControllers:vcs];
         
         [window setRootViewController:svc];
+        
+        [detailNav release];
+        [svc release];
     }
     else
         [window setRootViewController:masterNav];
-
+    
+    [lvc release];
+    [masterNav release];
+    [wvc release];
 }
 @end

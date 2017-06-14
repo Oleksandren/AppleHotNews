@@ -21,6 +21,8 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
 
 @implementation NewsListViewModel
 
+#pragma mark: - Object lifecycle
+
 - (instancetype)initWithNetworkLayer:(NetworkLayer *)networkLayer
 {
     self = [super init];
@@ -30,6 +32,15 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
     
     return self;
 }
+
+- (void)dealloc
+{
+    [_didErrorOccured release];
+    [_didUpdatedChanelInfo release];
+    [super dealloc];
+}
+
+#pragma mark: - NewsListViewModelProtocol
 
 - (void)fetchEntries
 {

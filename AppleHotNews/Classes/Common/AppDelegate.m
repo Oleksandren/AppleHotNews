@@ -15,16 +15,27 @@
 
 @implementation AppDelegate
 
+#pragma mark - Life cycle
+
+-(void)dealloc
+{
+    [_window release];
+    _window = nil;
+    [super dealloc];
+}
+
+#pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    [AppConfigurator setupRootViewControllerInWindow: self.window];
+    [AppConfigurator setupRootViewControllerInWindow: _window];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
+
 @end

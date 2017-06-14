@@ -14,10 +14,13 @@
 
 -(void)dealloc
 {
-    [super dealloc];
+    [_detail release];
+    [_title release];
+    [_link release];
     _detail = nil;
     _title = nil;
     _link = nil;
+    [super dealloc];
 }
 
 #pragma mark - Setters
