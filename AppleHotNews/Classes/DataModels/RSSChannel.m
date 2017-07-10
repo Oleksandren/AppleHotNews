@@ -25,11 +25,11 @@
 
 -(void)dealloc
 {
-    [super dealloc];
+    [_title release];
+    [_itemsStore release];
     _title = nil;
     _itemsStore = nil;
-    currentString = nil;
-    currentItem = nil;
+    [super dealloc];
 }
 
 #pragma mark - Setters
@@ -76,6 +76,7 @@ foundCharacters:(NSString *)str
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
 {
+    [currentString release];
     currentString = nil;
     
     if ([elementName isEqual:@"channel"])

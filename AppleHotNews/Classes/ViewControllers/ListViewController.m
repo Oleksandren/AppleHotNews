@@ -41,11 +41,11 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
 
 -(void)dealloc
 {
-    [super dealloc];
-    connection = nil;
-    xmlData = nil;
-    channel = nil;
+    [_webViewController release];
+    [channel release];
     _webViewController = nil;
+    channel = nil;
+    [super dealloc];
 }
 
 #pragma mark - UITableView Delegate
@@ -58,6 +58,7 @@ static NSString *const appleNewsUrlString = @"http://images.apple.com/main/rss/h
     {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_webViewController];
         NSArray *vcs = [NSArray arrayWithObjects:[self navigationController], nav, nil];
+        [nav release];
         [[self splitViewController] setViewControllers:vcs];
         [[self splitViewController] setDelegate:_webViewController];
     }

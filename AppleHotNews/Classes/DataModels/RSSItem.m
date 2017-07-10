@@ -14,10 +14,13 @@
 
 -(void)dealloc
 {
-    [super dealloc];
-    _detail = nil;
+    [_title release];
+    [_detail release];
+    [_link release];
     _title = nil;
+    _detail = nil;
     _link = nil;
+    [super dealloc];
 }
 
 #pragma mark - NSXMLParser Delegate

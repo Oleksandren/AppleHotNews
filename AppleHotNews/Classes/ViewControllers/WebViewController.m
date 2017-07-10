@@ -29,8 +29,9 @@
 
 -(void)dealloc
 {
-    [super dealloc];
+    [_item release];
     _item = nil;
+    [super dealloc];
 }
 
 #pragma mark - Assets

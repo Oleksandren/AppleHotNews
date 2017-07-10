@@ -16,10 +16,20 @@
 
 @implementation AppDelegate
 
+#pragma mark - Life cycle
+
+-(void)dealloc
+{
+    [_window release];
+    _window = nil;
+    [super dealloc];
+}
+
+#pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     ListViewController *lvc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:lvc];
     
@@ -35,9 +45,16 @@
         [svc setViewControllers:vcs];
         
         [[self window] setRootViewController:svc];
+        
+        [detailNav release];
+        [svc release];
     }
     else
         [[self window] setRootViewController:masterNav];
+    
+    [lvc release];
+    [masterNav release];
+    [wvc release];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
